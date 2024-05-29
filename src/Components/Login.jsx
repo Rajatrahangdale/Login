@@ -46,7 +46,7 @@ const Login = ({ val, setVal }) => {
                 <div>
                   <h4 className="opacity-75">Mobile</h4>
                   <input
-                    type="number"
+                    type="number" max="9999999999"
                     value={data.number}
                     {...register("number")}
                     className="w-full bg-transparent rounded-md border px-2 py-1 focus:outline-none focus:border-sky-500 focus:invalid:border-red-500"
