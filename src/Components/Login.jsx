@@ -16,40 +16,41 @@ const Login = ({ val, setVal }) => {
 
   return (
     <>
-      <div className="bg-zinc-700 h-screen w-full flex items-center justify-around gap-10">
-        <div className="bg-zinc-800 w-[600px] h-[600px] rounded-lg">
+      <div className="bg-zinc-200 h-screen w-full flex items-center justify-around gap-10">
+        <div className="bg-zinc-400 w-[600px] h-[600px] rounded-lg">
           <img
             src={LoginImg}
             className="w-full h-full object-scale-down"
             alt=""
           />
         </div>
-        <div className="w-[400px] h-[400px] text-white">
+        <div className="w-[400px] h-[400px] text-black">
           <h1 className="text-5xl font-bold">keek</h1>
-          <p className="opacity-75 py-2">
+          <p className="py-2 text-zinc-700 font-semibold">
             Please sign-in to your account and start the adventure
           </p>
           <form action="" method="get" onSubmit={onFormSubmit}>
             <div>
               {val ? (
                 <div>
-                  <h4 className="opacity-75">Email</h4>
+                  <h4 className="text-zinc-700 font-semibold">Email</h4>
                   <input
                     type="email"
                     value={data.email}
                     {...register("email")}
-                    className="w-full bg-transparent rounded-md border px-2 py-1 focus:bg-transparent focus:ring-1 focus:outline-none focus:border-sky-500 focus:invalid:border-red-500"
+                    className="w-full bg-transparent border-black rounded-md border px-2 py-1 focus:bg-transparent focus:ring-1 focus:outline-none focus:border-sky-500 focus:invalid:border-red-500"
                     placeholder="admin@vaexy.com"
                   />
                 </div>
               ) : (
                 <div>
-                  <h4 className="opacity-75">Mobile</h4>
+                  <h4 className="text-zinc-700 font-semibold">Mobile</h4>
                   <input
-                    type="number" max="9999999999"
+                    type="number"
+                    max="9999999999"
                     value={data.number}
                     {...register("number")}
-                    className="w-full bg-transparent rounded-md border px-2 py-1 focus:outline-none focus:border-sky-500 focus:invalid:border-red-500"
+                    className="w-full bg-transparent border-black rounded-md border px-2 py-1 focus:outline-none focus:border-sky-500 focus:invalid:border-red-500"
                     placeholder="mobile number"
                   />
                 </div>
@@ -68,7 +69,7 @@ const Login = ({ val, setVal }) => {
                   </button>
                 </div>
               </div>
-              <div className="bg-zinc-600 text-center rounded-md active:bg-red-500 active:translate-x-1">
+              <div className="bg-zinc-400 text-center rounded-md active:bg-red-500 active:translate-x-1">
                 <button
                   type="submit"
                   className="font-semibold w-full opacity-75 py-2"
@@ -79,7 +80,9 @@ const Login = ({ val, setVal }) => {
             </div>
           </form>
           <div className="text-zinc-400 font-semibold my-4 text-center">
-            <h2 className="inline opacity-80">New on our platform? </h2>
+            <h2 className="inline text-zinc-700 font-semibold">
+              New on our platform?{" "}
+            </h2>
             <button className="text-red-500 active:text-red-800">
               <Link to="/register">Create an account</Link>
             </button>
@@ -87,13 +90,13 @@ const Login = ({ val, setVal }) => {
           <div className="text-center text-zinc-400">
             <h2>-------------------- or ---------------------</h2>
           </div>
-          <div className="text-center my-2">
-            <button className="text-zinc-400 w-full border bg-transparent py-2  font-semibold rounded-md active:bg-red-500 active:translate-x-1">
+          <div className="text-center my-2 border border-black rounded-lg active:bg-red-500 active:border-white">
+            <button className="text-zinc-700 w-full border bg-transparent py-2  font-semibold rounded-md active:bg-red-500">
               <FaGoogle className="inline" /> Continue With Google
             </button>
           </div>
-          <div className="bg-transparent text-center">
-            <button className="text-zinc-400 w-full py-2 border rounded-md font-semibold active:bg-red-500 active:translate-x-1">
+          <div className="bg-transparent text-center border border-black rounded-lg active:bg-red-500 active:border-white">
+            <button className="text-zinc-700 w-full py-2 border rounded-md font-semibold active:bg-red-500">
               <FaFacebook className="inline" /> Continue With Facebook
             </button>
           </div>
